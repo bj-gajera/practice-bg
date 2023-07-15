@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { removeCart, updateCart } from "../redux/CartSlice";
+import { updateCart } from "../redux/CartSlice";
 
 const Cartcard = ({ item, handleRemove }) => {
   const dispatch = useDispatch();
-
   const [amount, setAmount] = useState(item.qty);
 
   const incre = () => {

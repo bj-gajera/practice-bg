@@ -3,10 +3,8 @@ import img24 from "../../images/page-header-bg.jpg";
 import { FiRefreshCw } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import "./cart.css";
-
 import Cartcard from "./Cartcard";
 import { removeCart } from "../redux/CartSlice";
-
 import { toast } from "react-toastify";
 
 const Cart = () => {
@@ -43,8 +41,7 @@ const Cart = () => {
     }
     dispatch(removeCart(val));
   };
-  // let tot = (total + choice).toFixed(2);
-  //
+
   return (
     <>
       <div className="pt-28 relative">
