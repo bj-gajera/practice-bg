@@ -1,0 +1,9 @@
+.content-main:hover .main-abso{
+    transform: translateY(-86px);
+    transition: .5s ease-in-out;
+}
+.content-main:hover .likeplus{
+    opacity: 1;
+    transform: translateX(-14px);
+    transition: .5s ease-in-out;
+}

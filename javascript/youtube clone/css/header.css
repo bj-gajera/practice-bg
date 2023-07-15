@@ -1,0 +1,152 @@
+.header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 50px;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 1px 3px rgba(138, 138, 138, 0.5);
+}
+
+.left-section {
+    align-items: center;
+    height: 50px;
+}
+
+.burger-line {
+    height: 18px;
+    vertical-align: center;
+    padding-top: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.youtube-icon {
+    vertical-align: top;
+    height: 50px;
+    width: 80px;
+
+}
+
+.middle-section {
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-bar::placeholder {
+    font-family: Roboto, arial;
+    font-size: 16px;
+}
+
+.search {
+    background-color: rgb(214, 214, 214);
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.search-bar {
+    flex: 1;
+    height: 24px;
+    padding-left: 10px;
+    font-size: 16px;
+    max-width: 400px;
+    border-style: solid;
+    border: 3px;
+
+    border-color: rgb(14, 13, 13);
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+    box-shadow: inset 1px 1px 3px rgba(138, 138, 138, 0.5);
+}
+
+.search-bar:active {
+    border: 0px;
+}
+
+.search-icon {
+    height: 20px;
+    width: 23px;
+    padding: 3px;
+    margin-top: 3px;
+    margin-left: -1px;
+    border: 2px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: rgb(214, 214, 214);
+    border-color: rgb(122, 121, 121);
+
+}
+
+
+
+.microphone {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-top: 3px;
+    margin-left: 8px;
+    background-color: rgb(214, 214, 214);
+}
+
+.right-section {
+    vertical-align: top;
+    width: 150px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: top;
+    flex-shrink: no;
+
+}
+
+.right-section .img {
+    margin: 5px;
+}
+
+.user-profile {
+    border: 1px solid;
+    border-radius: 50%;
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.notification {
+    height: 30px;
+}
+
+.notifications-icon-container {
+    position: relative;
+}
+
+.notifications-icon-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(190, 7, 7);
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 11px;
+    border-radius: 50%;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: -2px;
+}
