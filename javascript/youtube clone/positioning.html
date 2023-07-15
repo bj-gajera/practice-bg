@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>positioning</title>
+</head>
+
+<body style="height:3000px;
+padding-top: 60px; padding-left: 90px;">
+    <div style="background-color: black; color:white;
+    position: fixed;
+    top:0;
+    left: 0;;
+    right:100px;
+    height:50px ">
+        block
+    </div>
+    <div style="background-color: lightgray;
+    position:fixed;
+    width: 80px;
+    bottom:0;
+    left:0;
+    top:50px">
+        side
+    </div>
+    <div style="background-color: aqua; height: 200px; width: 200px;">
+        div1
+    </div>
+    <div style="background-color: lightpink;height: 200px; width: 200px;">
+        div2
+    </div>
+</body>
+
+</html>
+.search-button,
+.microphone-button {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+.search-button .tooltip,
+.microphone-button .tooltip {
+background-color: grey;
+color: white;
+padding-left: 6px;
+padding-right: 6px;
+padding-top: 4px;
+padding-bottom: 4px;
+font-size: 15px;
+border-radius: 3px;
+
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.15s;
+white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.microphone-button:hover .tooltip {
+opacity: 1;
+}

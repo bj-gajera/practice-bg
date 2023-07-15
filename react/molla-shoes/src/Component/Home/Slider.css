@@ -1,0 +1,20 @@
+.slick-slide{
+    height: 80vh !important;
+}
+
+
+
+.homeBanner .slick-dots {
+  bottom: 10px;
+}
+
+.homeBanner .slick-dots button:before {
+  color: rgb(17, 191, 49) !important;
+  font-size: 10px;
+}
+
+.homeBanner .slick-dots li.slick-active button:before {
+  color: White !important;
+}
+
+

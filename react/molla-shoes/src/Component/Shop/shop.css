@@ -1,0 +1,19 @@
+.content-home:hover .home-abso{
+    transform: translateY(-95px);
+    transition: .5s ease-in-out;
+}
+.content-home:hover .like{
+    opacity: 1;
+    transform: translateX(-10px);
+    transition: .5s ease-in-out;
+}
+.content-shop:hover .shop-abso{
+    transform: translateY(-20px);
+    transition: .3s ease-in-out; 
+    background-color: white;
+    
+}
+.shop-abso{  
+    background-color: rgba(255, 255, 255, 0.9);
+
+}

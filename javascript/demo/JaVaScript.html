@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <p id="java">Good</p>
+    <p id="luck">luck</p>
+    <button onclick="document.getElementById('java').innerHTML = 'bad morning'">
+      Change
+    </button>
+    <!-- <button onclick="document.getElementById('java').innerHTML = 'bad morning'">Change</button> -->
+    <button onclick="hello()">change</button><br><br>
+    <button onclick="myfunction()">try it</button>
+
+    <p id="demo">hellow world</p>
+
+    <script>
+        function myfunction(){
+            let text=document.getElementById("demo").innerHTML;
+            document.getElementById("demo").innerHTML=text.toUpperCase();
+        }
+    //   let text =
+    //     "I love cats. Cats are very easy to love. Cats are very popular";
+    //   text = text.replaceAll("Cats", "Dogs");
+    //   text = text.replaceAll("Cats", "dogs");
+
+    //   document.getElementById("demo").innerHTML = text;
+
+    </script>
+
+    <script>
+      // function hello(){
+      //     document.getElementById('java').style.color = "red"
+      //     document.getElementById('java').style.fontSize = "45px"
+      //     // document.getElementById('java').innerHTML = "Bad morning"
+      //     // document.getElementById('luck').innerHTML = "Good morning"
+      // }
+    </script>
+    <script src="./javascript.js"></script>
+
+    <!-- <h2>hellow javascript</h2>
+    <p id="brij">Lorem ipsum dolor sit.</p>
+    <button onclick="document.getElementById('brij').innerHTML='hellow javascript'">clik me</button> -->
+  </body>
+</html>
