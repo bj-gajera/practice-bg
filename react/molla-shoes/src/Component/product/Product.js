@@ -7,7 +7,6 @@ import { FiHeart } from "react-icons/fi";
 import "./product.css";
 import { useDispatch } from "react-redux";
 import { AddtoCart } from "../redux/CartSlice";
-
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -32,10 +31,6 @@ const Product = () => {
     toast.success("Add Successfully in to Cart");
     dispatch(AddtoCart(val));
   };
-
-  // const handleAdd = (val) => {
-  //   dispatch(AddtoCart(val));
-  // };
 
   return (
     <>
