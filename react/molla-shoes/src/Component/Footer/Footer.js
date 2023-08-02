@@ -6,18 +6,19 @@ import images2 from "../../images/logo-footer1.jpg";
 const Footer = () => {
   return (
     <>
-      <div className="bg-stone-700 px-16 text-gray-500">
-        <div className="grid grid-cols-10">
-          <div className="col-span-3 ">
-            <div className=" pt-9 flex m-6">
+      <div className="bg-stone-700 px-2 md:px-16 text-gray-500">
+        <div className="grid md:grid-cols-10">
+          <div className="md:col-span-3 ">
+            <div className=" pt-9 flex px-2 md:m-6">
               <img src={images2} alt="" />
             </div>
-            <div className="m-6 pt-7">
+            <div className="justify-start px-2 md:m-6 pt-7">
               <p>
-                Praesent daoibus, neque id cursus ucibus, tortor neque egestas
-                augue, eu vulputate magna eros eu erat.
+                Praesent daoibus, neque id cursus ucibus, <br />
+                tortor neque egestas augue, eu vulputate <br /> magna eros eu
+                erat.
               </p>
-              <div className="space-x-5 pt-10 flex items-center">
+              <div className="space-x-3  md:space-x-5 pt-10 flex items-center">
                 <button className="content flex items-center text-gray-400 border-2 rounded-full p-0.5 px-2.5">
                   <i className="fa-brands fa-facebook-f text-2xl"></i>
                 </button>
@@ -37,7 +38,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-2 px-2">
             <h1 className="text-xl font-bold pt-14 text-white">Useful Links</h1>
             <ul className="pt-12">
               <Link>
@@ -65,7 +66,7 @@ const Footer = () => {
               </Link>
             </ul>
           </div>
-          <div className="col-span-2 pl-22">
+          <div className="col-span-2 px-2 pl-22">
             <h1 className="text-xl font-bold pt-14 text-white">
               Customer Service
             </h1>
@@ -102,7 +103,7 @@ const Footer = () => {
               </Link>
             </ul>
           </div>
-          <div className="col-span-2 pl-20">
+          <div className="col-span-2 px-2 md:pl-20">
             <h1 className="text-xl font-bold pt-14 text-white">My Account</h1>
             <ul className="pt-12">
               <Link>
@@ -131,13 +132,13 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="w-full pt-10 px-6">
+        <div className="w-full pt-10  md:px-6 px-2">
           <hr></hr>
         </div>
-        <div className="flex items-center justify-between px-6 py-6">
+        <div className="md:flex items-center justify-between px-2 md:px-6 py-6">
           <p>Copyright&copy; 2019 Shoes Store, All Rights Reserved</p>
-          <div>
-            <ul className="flex items-center space-x-4 text-2xl">
+          <div className=" px-12 md:px-0">
+            <ul className="flex  md:items-center space-x-4 text-2xl">
               <li>
                 <i className="fa-brands fa-cc-visa text-blue-500"></i>
               </li>

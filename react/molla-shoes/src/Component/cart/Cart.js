@@ -45,19 +45,23 @@ const Cart = () => {
   return (
     <>
       <div className="pt-28 relative">
-        <img src={img24} alt="image" className="h-[180px]" />
-        <div className="absolute top-[150px] left-[520px] text-center ">
-          <h1 className="text-5xl font-semibold">Shopping Cart</h1>
-          <p className="py-4 text-2xl text-orange-500">Shop</p>
+        <img src={img24} alt="image" className="h-[130px] md:h-[180px]" />
+        <div className="absolute top-36 left-[100px] md:top-[150px] md:left-[520px] text-center ">
+          <h1 className="text-3xl md:text-5xl font-semibold">Shopping Cart</h1>
+          <p className="py-2 md:py-4 text-2xl text-orange-500">Shop</p>
         </div>
       </div>
-      <div className="pt-14 px-20  pb-20">
+      <div className="pt-14 px-2 md:px-20  pb-20">
         {cart && cart.length === 0 ? (
-          <>no products in this cart</>
+          <>
+            <div className="text-center text-2xl font-bold text-red-700">
+              No products in this cart
+            </div>
+          </>
         ) : (
-          <div className="grid grid-cols-3">
+          <div className="md:grid grid-cols-3">
             <div className="col-span-2">
-              <div className="grid grid-cols-7 ">
+              <div className="hidden md:grid grid-cols-7 ">
                 <div className="col-span-1">
                   <p className="text-xl text-gray-400">Product</p>
                 </div>
@@ -78,9 +82,9 @@ const Cart = () => {
                   <p className="text-xl text-gray-400 px-8">Total</p>
                 </div>
                 <div className="col-span-1">
-                  <p className="text-xl text-gray-400 px-6">X</p>
+                  <p className="text-xl text-gray-400 px-12">X</p>
                 </div>
-                <div className="w-[750px] py-4">
+                <div className="md:w-[750px] py-4">
                   <hr />
                 </div>
               </div>
@@ -102,9 +106,9 @@ const Cart = () => {
                 <div>
                   <h1 className="text-xl font-semibold py-4">Cart Total</h1>
                   <hr />
-                  <div className="flex">
+                  <div className="flex justify-between">
                     <h1 className="text-xl py-4">Subtotal:</h1>
-                    <p className="px-36 pt-5">${total}</p>
+                    <p className=" pt-5">${total.toFixed(2)}</p>
                   </div>
                   <hr />
                   <p className="text-xl py-4">Shipping:</p>
@@ -117,9 +121,11 @@ const Cart = () => {
                         onChange={(e) => setChoice(Number(e.target.value))}
                         name="cart"
                       />
-                      <label className="px-2">Free Shipping:</label>
-                      <p className="free-shipping">$0.0</p>
-                      <br />
+
+                      <div className="flex gap-24">
+                        <label className="px-2">Free Shipping:</label>
+                        <p className="">$0.00</p>
+                      </div>
                     </div>
                     <div className="py-1 flex">
                       <input
@@ -128,9 +134,10 @@ const Cart = () => {
                         onChange={(e) => setChoice(Number(e.target.value))}
                         name="cart"
                       />
-                      <label className="px-2">Standart:</label>
-                      <p className="px-[136px]"> $10.0</p>
-                      <br />
+                      <div className="flex gap-32">
+                        <label className="px-2">Standard:</label>
+                        <p className=""> $10.00</p>
+                      </div>
                     </div>
                     <div className="py-1 flex">
                       <input
@@ -139,9 +146,10 @@ const Cart = () => {
                         onChange={(e) => setChoice(Number(e.target.value))}
                         name="cart"
                       />
-                      <label className="px-2">Express:</label>
-                      <p className="px-36">$20.0</p>
-                      <br />
+                      <div className="flex gap-[140px]">
+                        <label className="px-2">Express:</label>
+                        <p className="">$20.00</p>
+                      </div>
                     </div>
                   </div>
                   <h1 className="text-xl font-medium pt-4">
@@ -156,9 +164,11 @@ const Cart = () => {
                     </a>
                   </div>
                   <hr />
-                  <div className="py-4 text-xl flex text-orange-500">
+                  <div className="py-4 text-xl flex justify-between text-orange-500">
                     <h1>Total: </h1>
-                    <p className="px-[162px]">{(total + choice).toFixed(2)}</p>
+                    <span>
+                      <p className="">${(total + choice).toFixed(2)}</p>
+                    </span>
                   </div>
                   <div className="text-center px-5 py-1 border-2 border-solid border-orange-300 text-orange-600 hover:text-white hover:bg-orange-300">
                     <button>PROCEED TO CHEKOUT</button>

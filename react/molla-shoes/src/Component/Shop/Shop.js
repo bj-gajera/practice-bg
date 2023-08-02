@@ -35,15 +35,15 @@ const Shop = () => {
 
   return (
     <>
-      <div className="w-full relative">
+      <div className="  md:w-full relative">
         <img src={Img11} alt="" className="pt-20" />
-        <div className="absolute  left-1/2 -translate-x-1/2 top-1/2 py-8   text-center">
-          <h1 className="text-4xl">New Arrivals</h1>
+        <div className="absolute text-center left-[180px] md:left-1/2 -translate-x-1/2 top-1/2 py-8   md:text-center">
+          <h1 className="text-xl md:text-4xl">New Arrivals</h1>
         </div>
       </div>
       <div className="bg-slate-50">
         <div className="flex justify-center py-4">
-          <div className=" space-x-12 ">
+          <div className="space-x-4 md:space-x-12 ">
             <button
               className={
                 category == "all"
@@ -78,12 +78,12 @@ const Shop = () => {
         </div>
       </div>
       <div className="">
-        <div className="grid grid-cols-4 gap-8 bg-slate-50 text-center hover:cursor-pointer  ">
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-4  md:gap-8 bg-slate-50 text-center hover:cursor-pointer  ">
           {shopList.map((item, key) => {
             return (
               <div
                 key={key}
-                className="  relative overflow-hidden h-[60vh] content-home"
+                className="  relative md:overflow-hidden h-[60vh] content-home"
               >
                 <img
                   src={item.src}
@@ -106,9 +106,9 @@ const Shop = () => {
                   </p>
                 </div>
 
-                <div className="bg-white p-2 absolute left-0 right-0   home-abso">
+                <div className="bg-white  p-2 md:absolute left-0 right-0   home-abso">
                   <p className="text-slate-400 py-1">{item.category1} </p>
-                  <p className=" py-1 hover:underline h-12 hover:text-sky-900">
+                  <p className=" py-1 hover:underline h-24 md:h-12 hover:text-sky-900">
                     {item.name}
                   </p>
                   <p className="py-1 text-red-600 font-bold">
@@ -119,7 +119,7 @@ const Shop = () => {
                       ""
                     )}
                   </p>
-                  <h1 className=" py-1 flex gap-1 items-center justify-center">
+                  <h1 className=" md:py-1 flex gap-1 items-center justify-center">
                     <BsStar size={14} />
                     <BsStar size={14} />
                     <BsStar size={14} />
@@ -130,7 +130,7 @@ const Shop = () => {
                   <p className="h-0.5  bg-slate-300">
                     <hr></hr>
                   </p>
-                  <div className="grid grid-cols-2 gap-5 py-2 px-2 text-sky-900 text-sm ">
+                  <div className="grid md:grid-cols-2 gap-5 py-1 md:py-2 px-2 text-sky-900 text-sm ">
                     <button
                       onClick={() => handleAdd(item)}
                       className="flex gap-2 border-r-2 border-slate-400 items-center hover:underline"
@@ -150,15 +150,15 @@ const Shop = () => {
           })}
         </div>
       </div>
-      <div className="grid grid-cols-3 py-20 px-20 cursor-pointer">
+      <div className="grid  md:grid-cols-3 py-28 md:px-20 cursor-pointer">
         {product.map((item, key) => {
           return (
             <div
               key={key}
-              className=" banner-content  relative overflow-hidden content-shop"
+              className=" banner-content  md:relative md:overflow-hidden content-shop"
             >
               <img src={item.src} className="" alt={item.alt}></img>
-              <div className="  absolute text-center  top-52  w-full    shop-abso">
+              <div className="  md:absolute text-center  md:top-52  md:w-full   shop-abso">
                 <p className="text-2xl">{item.category}</p>
                 <p className="text-xl  text-gray-500">{item.product}</p>
                 <p className="text-sky-900 py-2 text-base hover:underline">

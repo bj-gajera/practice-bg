@@ -10,12 +10,14 @@ import Blog from "../blog/Blog";
 import Contactus from "../contactus/Contactus";
 import Cart from "../cart/Cart";
 import Blogdetails from "../blog/Blogdetails";
+import Scrolltotop from "../scroll/Scrolltotop";
 
 const Router = () => {
   return (
     <>
       <BrowserRouter>
         <Navbar />
+        <Scrolltotop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
