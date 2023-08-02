@@ -33,8 +33,8 @@ const Cartcard = ({ item, handleRemove }) => {
 
   return (
     <>
-      <div className="grid grid-cols-7">
-        <div className="col-span-1">
+      <div className="text-center md:grid grid-cols-7">
+        <div className="col-span-1 px-36 md:px-0">
           <img src={item.src} alt="" className="h-[80px] w-[80px]" />
         </div>
         <div className="col-span-2 place-content-center">
@@ -46,8 +46,8 @@ const Cartcard = ({ item, handleRemove }) => {
         <div className="col-span-1 px-8 py-3 ">
           <p>${item.price}</p>
         </div>
-        <div className="col-span-1 py-3 ">
-          <div className="flex ">
+        <div className=" col-span-1 py-3 ">
+          <div className="flex px-32 md:px-0">
             <div>
               <button onClick={decre} className="h-8 w-8 bg-slate-300">
                 -
@@ -78,7 +78,7 @@ const Cartcard = ({ item, handleRemove }) => {
           </button>
         </div>
       </div>
-      <div className="pb-6 w-[750px]">
+      <div className="pb-6 w-[350px] md:w-[750px]">
         <hr />
       </div>
     </>

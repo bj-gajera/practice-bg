@@ -46,9 +46,15 @@ const Blog = () => {
   return (
     <>
       <div className="pt-24">
-        <img src={img24} alt="image" className="relative px-20 w-[1350px]" />
-        <div className=" ">
-          <div className="absolute top-36 left-36 ">
+        <div className="relative md:px-20">
+          <img
+            src={img24}
+            alt="image"
+            className="h-[240px] w-[800px] md:h-[170px] md:w-[1170px]"
+          />
+        </div>
+        <div className="">
+          <div className="absolute top-32 px-4 md:top-36 md:left-36 ">
             <h1 className="text-2xl text-sky-900 font-bold">
               New Deals! Start Daily at 12pm e.t.
             </h1>
@@ -60,9 +66,9 @@ const Blog = () => {
             </p>
           </div>
 
-          <div className="absolute top-36 right-40 ">
+          <div className="absolute top-64 px-3 md:top-36 md:right-40 ">
             <Link to="">
-              <button className="rounded-full px-6 py-3 flex gap-2 text-sky-900 bg-white hover:bg-sky-900 hover:text-white">
+              <button className="rounded-full px-6 py-3 flex gap-2 text-sm md:text-base text-sky-900 bg-white hover:bg-sky-900 hover:text-white">
                 ADD TO CART FOR $50.00/YR
                 <BsArrowRight size={22} />
               </button>
@@ -74,16 +80,20 @@ const Blog = () => {
             From Our Blog
           </h1>
         </div>
-        <div className="grid grid-cols-4 px-20">
+        <div className="grid md:grid-cols-4 md:px-20">
           {blogdata.map((item) => {
             let name = item.name.replaceAll(" ", "_");
             return (
               <>
-                <div className="text-center">
+                <div className="text-center py-4 md:py-0">
                   <Link to={`/blog/${name}`}>
-                    <img src={item.image} alt="img" />
+                    <img
+                      src={item.image}
+                      alt="img"
+                      className="w-full md:w-[285px]"
+                    />
                   </Link>
-                  <div className="text-gray-400 pt-4 hover:underline">
+                  <div className="text-gray-400  pt-4 hover:underline">
                     <a href="#">{item.date},</a> {item.comment} Comments
                   </div>
                   <h3 className="text-2xl py-2  hover:text-sky-900">
@@ -97,24 +107,24 @@ const Blog = () => {
         </div>
         <div className="pt-24">
           <div className="relative">
-            <img src={img29} alt="image" className="h-[250px]" />
+            <img src={img29} alt="image" className="h-[250px] md:h-[250px]" />
           </div>
-          <div className="absolute left-[390px] top-[850px]">
-            <h1 className="text-3xl text-center text-white font-bold">
+          <div className="absolute px-5 top-[2250px] md:left-[390px] md:top-[850px]">
+            <h1 className="text-2xl md:text-3xl text-center text-white font-bold">
               Subscribe for Our Newsletter
             </h1>
-            <p className="text-white text-center py-1 text-xl">
+            <p className="text-white text-center py-1 md:text-xl">
               and receive $20 coupon for first shopping
             </p>
-            <div className=" relative flex py-6">
+            <div className=" relative md:flex  py-6">
               <input
-                className="py-3 rounded-full w-[550px] px-6 bg-white"
+                className="py-3 rounded-full w-[330px] md:w-[550px] px-6 bg-white"
                 type="email"
                 placeholder="Enter your Email Address"
               />
 
-              <div>
-                <button className=" absolute left-[400px] flex gap-2 bg-white rounded-full py-3 px-6 w-[150px] hover:bg-sky-900 hover:text-white">
+              <div className="py-2 md:py-0">
+                <button className=" absolute  left-[80px] md:left-[400px] flex gap-2 bg-white rounded-full py-3 px-6 w-[150px] hover:bg-sky-900 hover:text-white">
                   SUBSCRIBE <BsArrowRight size={22} className="pt-1" />
                 </button>
               </div>

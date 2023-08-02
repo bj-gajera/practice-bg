@@ -13,11 +13,11 @@ const Home = () => {
   return (
     <>
       <HomeSlider />
-      <div className="grid grid-cols-3 mx-20">
-        <div className="col-span-2 grid grid-cols-2 ">
+      <div className="grid  md:grid-cols-3 mx-4 md:mx-20">
+        <div className="md:col-span-2 md:grid md:grid-cols-2 ">
           <div className="pb-6 hover:opacity-90">
             <img src={images4} alt="" className="absolute" />
-            <div className="relative left-48 pt-16 text-white">
+            <div className="relative left-10 md:left-48 pt-16 text-white">
               <p className="hover:text-yellow-500">New Arrivals</p>
               <h1 className="font-bold text-2xl">
                 Sneakers & <br></br> Athletic Shoes
@@ -42,9 +42,9 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="col-span-2 hover:opacity-75">
+          <div className="col-span-2 hidden md:block hover:opacity-75">
             <img src={images7} alt="" className="absolute " />
-            <div className="relative px-20 pt-14 text-white">
+            <div className="relative   px-8 md:px-20 md:pt-14 text-white">
               <p>On Sale</p>
               <h1 className="text-2xl font-bold">Slip-On Loafers</h1>
               <h2 className="text-2xl">up to 30% off</h2>
@@ -75,8 +75,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 pt-20 pb-10 mx-24 gap-10 ">
-        <div className="col-span-1 flex items-center gap-6  border-r-2 border-r-slate-300">
+      <div className="grid md:grid-cols-4 pt-20 pb-10 mx-12 md:mx-24 gap-10 ">
+        <div className="col-span-1 flex items-center gap-6  md:border-r-2 border-r-slate-300">
           <div>
             <h3 className="text-sky-900">
               <SlRocket size={30} />
@@ -87,7 +87,7 @@ const Home = () => {
             <h1 className="text-gray-600">orders $50 or more</h1>
           </div>
         </div>
-        <div className="col-span-1 flex items-center gap-6 border-r-2 border-r-slate-300 ">
+        <div className="col-span-1 flex items-center gap-6 md:border-r-2 border-r-slate-300 ">
           <div>
             <h3 className="text-sky-900">
               <MdRestore size={38} />
@@ -98,7 +98,7 @@ const Home = () => {
             <h1 className="text-gray-600">Within 30 days</h1>
           </div>
         </div>
-        <div className="col-span-1 flex items-center gap-6 border-r-2 border-r-slate-300 ">
+        <div className="col-span-1 flex items-center gap-6 md:border-r-2 border-r-slate-300 ">
           <div>
             <h3 className="text-sky-900">
               <MdOutlineInfo size={38} />

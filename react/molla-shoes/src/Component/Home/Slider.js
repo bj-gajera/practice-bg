@@ -49,13 +49,17 @@ const HomeSlider = () => {
   ];
   return (
     <>
-      <div className="homeBanner  mx-20 pb-8 pt-20">
+      <div className="homeBanner mx-4 md:mx-20 pb-8 pt-20 ">
         <Slider {...settings}>
           {sliderList.map((item, key) => {
             return (
               <div key={key}>
-                <img src={item.src} alt={item.alt} className="h-[80vh]"></img>
-                <div className="relative text-white bottom-96 px-24">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="h-[78vh] md:h-[80vh]"
+                ></img>
+                <div className="relative text-white bottom-96 px-6 md:px-24">
                   <p className="text-2xl py-2">{item.catogory}</p>
                   <h1 className="text-5xl font-bold py-2">{item.name}</h1>
                   <p className="text-3xl"> from ${item.price}</p>

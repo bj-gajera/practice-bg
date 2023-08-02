@@ -4,6 +4,8 @@ import Images from "../../images/logo.jpg";
 import { BsCart2 } from "react-icons/bs";
 import { VscSearch } from "react-icons/vsc";
 import { useSelector } from "react-redux";
+import { FiMenu } from "react-icons/fi";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -11,46 +13,46 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-white w-full fixed  z-10">
-        <div className="flex mx-20  space-x-16">
-          <div className="pt-8">
-            <img src={Images} alt="" />
+      <div className=" bg-white w-full fixed  z-10 ">
+        <div className="flex items-center justify-between m-4  md:mx-20 md:space-x-16 ">
+          <div className="">
+            <img src={Images} className="" alt="" />
           </div>
-          <div>
-            <ul className="flex gap-10 pb-8  pt-8">
+          <div className="hidden md:block">
+            <ul className="flex gap-10 py-2 ">
               <Link to="/">
                 <li>
-                  <button>HOME</button>
+                  <a href="">HOME</a>
                 </li>
               </Link>
 
               <Link to="/shop">
                 <li>
-                  <button>SHOP</button>
+                  <a href="">SHOP</a>
                 </li>
               </Link>
 
               <Link to="/Product">
                 <li>
-                  <button>PRODUCT</button>
+                  <a href="">PRODUCT</a>
                 </li>
               </Link>
 
               <Link to="/blog">
                 <li>
-                  <button>BLOG</button>
+                  <a href="">BLOG</a>
                 </li>
               </Link>
 
               <Link to="/contactus">
                 <li>
-                  <button>CONTACT US</button>
+                  <a href="">CONTACT US</a>
                 </li>
               </Link>
             </ul>
           </div>
-          <div>
-            <ul className="flex absolute right-24 pt-8 space-x-4">
+          <div className="flex items-center px-10">
+            <ul className="flex space-x-4 ">
               <li>
                 <button>
                   <VscSearch size={21} />
@@ -67,10 +69,52 @@ const Navbar = () => {
                   </button>
                 </li>
               </Link>
+              <li className="md:hidden block  ">
+                <button onClick={() => setOpen(!open)}>
+                  <FiMenu size={22} />
+                </button>
+              </li>
             </ul>
           </div>
         </div>
       </div>
+      {open === true && (
+        <>
+          <div className="absolute top-20 text-center  w-[375px] z-10  bg-gray-50 ">
+            <ul className=" ">
+              <Link to="/">
+                <li>
+                  <a href="">HOME</a>
+                </li>
+              </Link>
+
+              <Link to="/shop">
+                <li>
+                  <a href="">SHOP</a>
+                </li>
+              </Link>
+
+              <Link to="/Product">
+                <li>
+                  <a href="">PRODUCT</a>
+                </li>
+              </Link>
+
+              <Link to="/blog">
+                <li>
+                  <a href="">BLOG</a>
+                </li>
+              </Link>
+
+              <Link to="/contactus">
+                <li>
+                  <a href="">CONTACT US</a>
+                </li>
+              </Link>
+            </ul>
+          </div>
+        </>
+      )}
     </>
   );
 };

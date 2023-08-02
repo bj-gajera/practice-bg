@@ -79,18 +79,18 @@ const Blogdetails = () => {
       <div className="pb-20">
         <div className="pt-28 ">
           <div className="relative ">
-            <img src={img30} alt="image" className="h-[150px]" />
+            <img src={img30} alt="image" className="h-[130px] md:h-[150px]" />
           </div>
-          <div className="absolute top-36 left-[500px] text-center">
-            <h1 className="text-5xl">Default With Sidebar</h1>
+          <div className="absolute top-36 left-12 md:top-36 md:left-[500px] text-center">
+            <h1 className="text-3xl md:text-5xl">Default With Sidebar</h1>
             <p className="text-xl pt-1">Single Post</p>
           </div>
         </div>
         {data.map((item) => {
           return (
             <>
-              <div className="grid grid-cols-9 px-20">
-                <div className=" gird col-span-7 pt-8">
+              <div className="md:grid grid-cols-9 px-2 md:px-20">
+                <div className=" md:gird col-span-7 pt-8">
                   <img src={item.image} alt="image" className="w-full" />
                   <p className="py-3">{item.date}</p>
                   <p className="font-bold text-xl">{item.name}</p>
@@ -98,27 +98,27 @@ const Blogdetails = () => {
                     <a href="">{item.life}</a>
                   </p>
                   <p>{item.details}</p>
-                  <div className="grid grid-cols-7 pt-6">
-                    <div className="grid col-span-3 ">
+                  <div className="md:grid grid-cols-7 pt-6">
+                    <div className="md:grid col-span-3 ">
                       <img src={img32} alt="image" />
                     </div>
-                    <div className="grid col-span-4">
+                    <div className="md:grid col-span-4">
                       <div>
-                        <h1 className="text-2xl font-semibold">
+                        <h1 className="text-2xl font-semibold pt-3 md:pt-0">
                           Quisque volutpat mattiseros
                         </h1>
-                        <p className="py-4 text-justify">
+                        <p className="py-2 md:py-4 md:text-justify">
                           Sed pretium, ligula sollicitudin laoreet viverra,
                           tortor libero sodales leo, eget blandit nunc tortor eu
                           nibh. Nullam mollis. Ut justo. Suspendisse potenti.
                         </p>
-                        <p className="py-4 text-justify">
+                        <p className=" py-2 md:py-4 md:text-justify">
                           Sed egestas, ante et vulputate volutpat, eros pede
                           semper est, vitae luctus metus libero eu augue. Morbi
                           purus libero, faucibus adipiscing, commodo quis,
                           gravida id, est.
                         </p>
-                        <p className="py-4 text-justify">
+                        <p className="py-2 md:py-4 md:text-justify">
                           Sed lectus. Praesent elementum hendrerit tortor. Sed
                           semper lorem at felis. Vestibulum volutpat, lacus a
                           ultrices sagittis, mi neque euismod dui, eu pulvinar
@@ -128,7 +128,7 @@ const Blogdetails = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="py-3">
+                  <p className="py-2 md:py-3 ">
                     Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In
                     nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed
                     pretium, ligula sollicitudin laoreet viverra, tortor libero
@@ -139,7 +139,7 @@ const Blogdetails = () => {
                     commodo quis, gravida id, est. Sed lectus. Praesent
                     elementum hendrerit tortor. Sed semper lorem at felis.
                   </p>
-                  <p>
+                  <p className="py-2 md:py-0">
                     Morbi purus libero, faucibus adipiscing, commodo quis,
                     gravida id, est. Sed lectus. Praesent elementum hendrerit
                     tortor. Sed semper lorem at felis. Vestibulum volutpat,
@@ -181,23 +181,25 @@ const Blogdetails = () => {
                     quis, faucibus non, congue vel, arcu.
                   </p>
 
-                  <div className="grid col-span-7">
-                    <div className="flex gap-4">
-                      <p className="pt-1">Tags:</p>
+                  <div className="md:grid col-span-7">
+                    <div className="md:flex md:gap-96 pt-8 md:pt-0">
+                      <div className="flex gap-4">
+                        <p className="pt-1">Tags:</p>
 
-                      <a
-                        href=""
-                        className="border-2 rounded-md bg-gray-100 px-3 py-1"
-                      >
-                        Photography
-                      </a>
-                      <a
-                        href=""
-                        className="border-2 rounded-md bg-gray-100 px-3 py-1"
-                      >
-                        Style
-                      </a>
-                      <div className="icon flex gap-2">
+                        <a
+                          href=""
+                          className="border-2 rounded-md bg-gray-100 px-3 py-1"
+                        >
+                          Photography
+                        </a>
+                        <a
+                          href=""
+                          className="border-2 rounded-md bg-gray-100 px-3 py-1"
+                        >
+                          Style
+                        </a>
+                      </div>
+                      <div className="md:icon flex gap-2 py-2">
                         <p className="">Share this post:</p>
                         <ul className="flex gap-6 pt-1">
                           <Link to="">
@@ -230,7 +232,7 @@ const Blogdetails = () => {
                         <img
                           src={img34}
                           alt="image"
-                          className="rounded-full w-[60px]"
+                          className="rounded-full w-[220px] md:w-[60px]"
                         />
                       </div>
                       <div className="px-6 py-4">
@@ -247,9 +249,9 @@ const Blogdetails = () => {
                     <h1 className="font-bold text-xl">Related Posts</h1>
                   </div>
 
-                  <div className="grid col-span-7">
-                    <div className="flex gap-x-5">
-                      <div>
+                  <div className="md:grid col-span-7">
+                    <div className="md:flex gap-x-5">
+                      <div className="py-4 md:py-0">
                         <img src={img35} alt="image" />
                         <a
                           href=""
@@ -267,7 +269,7 @@ const Blogdetails = () => {
                           in Lifestyle, Shopping
                         </a>
                       </div>
-                      <div>
+                      <div className="py-4 md:py-0">
                         <img src={img36} alt="image" />
                         <a
                           href=""
@@ -285,7 +287,7 @@ const Blogdetails = () => {
                           in Lifestyle
                         </a>
                       </div>
-                      <div>
+                      <div className="py-4 md:py-0">
                         <img src={img37} alt="image" />
                         <a
                           href=""
@@ -316,14 +318,14 @@ const Blogdetails = () => {
                       <img
                         src={img38}
                         alt=""
-                        className="rounded-full w-[80px]"
+                        className="rounded-full w-[200px] md:w-[80px]"
                       />
                     </div>
                     <div className="px-8">
                       <a href="">Jimmy pearson</a>
                       <p className="text-gray-400 flex">
                         November 9, 2018 at 2:19 pm
-                        <div className="continer flex gap-2">
+                        <div className="md:continer flex gap-2">
                           <a href="">Reply</a>
                           <GoReply size={24} className="pt-1" />
                         </div>
@@ -338,15 +340,19 @@ const Blogdetails = () => {
                   <div className="">
                     <hr />
                   </div>
-                  <div className="flex py-8 px-28">
+                  <div className="flex py-8 px-8 md:px-28">
                     <div className="pt-3">
-                      <img src={img39} alt="" className="rounded-full " />
+                      <img
+                        src={img39}
+                        alt=""
+                        className="rounded-full w-[80px] md:w-[60px]"
+                      />
                     </div>
                     <div className="px-8">
                       <a href="">Lena Knight</a>
                       <p className="text-gray-400 flex">
                         November 9, 2018 at 2:19 pm
-                        <div className="cointer-1 flex gap-2">
+                        <div className="md:cointer-1 flex gap-2">
                           <a href="">Reply</a>
                           <GoReply size={24} className="pt-1" />
                         </div>
@@ -364,14 +370,14 @@ const Blogdetails = () => {
                       <img
                         src={img40}
                         alt=""
-                        className="rounded-full w-[80px]"
+                        className="rounded-full w-[220px] md:w-[80px]"
                       />
                     </div>
                     <div className="px-8">
                       <a href="">Johnathan Castillo</a>
                       <p className="text-gray-400 flex">
                         November 9, 2018 at 2:19 pm
-                        <div className="continer flex gap-2">
+                        <div className="md:continer flex gap-2">
                           <a href="">Reply</a>
                           <GoReply size={24} className="pt-1" />
                         </div>
@@ -385,7 +391,7 @@ const Blogdetails = () => {
                     </div>
                   </div>
                   <div className="bg-slate-100 pb-6">
-                    <div className="px-10 pt-8">
+                    <div className="px-2 md:px-10 pt-8">
                       <h1 className="text-xl font-bold ">Leave A Reply</h1>
                       <p className="text-gray-400 py-2">
                         Your email address will not be published. Required
@@ -395,25 +401,24 @@ const Blogdetails = () => {
                         <textarea
                           name="comments"
                           id=""
-                          cols="108"
                           rows="4"
                           placeholder="Comment*"
-                          className="px-4 pt-2"
+                          className="px-2 md:px-4 pt-2 w-[318px] md:w-full"
                         ></textarea>
-                        <div className="py-4 space-x-6">
+                        <div className="py-4  md:space-x-6">
                           <input
                             type="text"
                             name="name"
                             id="name"
                             placeholder="Name*"
-                            className="border-2 w-[410px] px-4 py-1.5 "
+                            className="border-2 w-[320px] md:w-[410px] px-4 py-1.5 "
                           />
                           <input
                             type="text"
                             name="Email"
                             id="email"
                             placeholder="Email*"
-                            className="border-2 w-[410px] px-4 py-1.5"
+                            className="border-2 w-[320px] md:w-[410px] px-4 py-1.5"
                           />
                         </div>
 
@@ -441,11 +446,11 @@ const Blogdetails = () => {
                         name="Search in blog"
                         id="search"
                         placeholder="Search in blog"
-                        className="border-2 px-3 py-1.5 w-[280px] text-sm relative"
+                        className="border-2 px-3 py-1.5 w-[305px] md:w-[280px] text-sm relative"
                       />
                       <VscSearch
                         size={18}
-                        className="absolute top-[340px] left-[1270px] text-slate-500"
+                        className="absolute top-[5851px] left-[300px] md:top-[340px] md:left-[1270px] text-slate-500"
                       />
                     </form>
                     <div className="pt-8">
